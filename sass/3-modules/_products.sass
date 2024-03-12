@@ -1,53 +1,60 @@
 @use '../1-base/variables'
 @use '../1-base/base-mixins'
 
+.produtos
+  font-size: 2rem
+  text-transform: uppercase
+  padding-left: 2rem
+  @include base-mixins.mobile
+    text-align: center
+#sold
+  padding-top: 2rem
+
 .products-grid-card
   border: 1px solid variables.$gray-text-color
   position: relative
-  width: 20%
+  width: 100%
   padding: 1rem
   transition: .4s
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
-
-  @include base-mixins.mobile
-    width: 90%
-    margin: 1rem
+  
 
   &:hover
     border-color: variables.$primary-color
 
-  .label
-    text-transform: uppercase
-    border: 1px solid variables.$primary-color
-    color: variables.$primary-color
-    position: absolute
-    top: 1rem
-    right: 1rem
-    padding: 2px 6px
+.new, .hot
+  text-transform: uppercase
+  border: 1px solid variables.$primary-color
+  color: variables.$primary-color
+  position: absolute
+  top: 0.5rem
+  right: 0.5rem
+  padding: 2px 6px
 
-  .new
-    background-color: variables.$primary-color
-    color: variables.$light-color
+#label-new
+  background-color: variables.$primary-color
+  color: variables.$light-color
 
-  img
-    width: 100%
+img
+  padding-top: 2rem
+  width: 100%
 
-  .category, .product-name, .product-price, .rating-box, .btn
-    margin-bottom: 1rem
-  
-  .category
-    margin-top: 1rem
-    text-transform: uppercase
-    color: variables.$gray-text-color
+.category, .product-name, .product-price, .rating-box
+  margin-bottom: 1rem
 
-  .product-name
-    text-transform: uppercase
-    font-size: 1.2rem
+.category
+  margin-top: 1rem
+  text-transform: uppercase
+  color: variables.$gray-text-color
 
-  .product-price
-    color: variables.$primary-color
-    font-size: 1.5rem
-    font-weight: bold
+.product-name
+  text-transform: uppercase
+  font-size: 1.2rem
+
+.product-price
+  color: variables.$primary-color
+  font-size: 1.5rem
+  font-weight: bold

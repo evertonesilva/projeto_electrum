@@ -5,6 +5,7 @@
 .header-top {
   background-color: #1e1f29;
   color: #fff;
+  display: none;
 }
 .header-top-container {
   max-width: 1170px;
@@ -31,6 +32,8 @@
   display: flex;
   justify-content: space-between;
   padding: 1.3rem 0;
+  flex-direction: column;
+  align-items: center;
 }
 .main-header-container a, .main-header-container span, .main-header-container i {
   color: #fff;
@@ -47,6 +50,8 @@
   align-items: center;
   justify-content: center;
   width: 45%;
+  width: 100%;
+  margin: 2rem 0;
 }
 .main-header-container input {
   height: 40px;
@@ -87,6 +92,11 @@
 .main-header-container .wishlist-container a:hover, .main-header-container .header-cart-container a:hover {
   color: #D10024;
 }
+@media (max-width: 425px) {
+  .main-header-container .wishlist-container, .main-header-container .header-cart-container {
+    margin: 1rem;
+  }
+}
 
 .header-bottom {
   background-color: #fff;
@@ -100,6 +110,11 @@
   justify-content: space-between;
   justify-content: left;
   padding: 1rem 0;
+}
+@media (max-width: 425px) {
+  .header-bottom ul {
+    display: none;
+  }
 }
 .header-bottom ul li {
   margin-right: 1.3rem;
@@ -120,21 +135,183 @@
   justify-content: space-between;
   padding: 3rem 0;
 }
+@media (max-width: 425px) {
+  .banners {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .products-grid {
   max-width: 1170px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
-  padding: 2rem 0;
-}
-.products-grid h2 {
-  font-size: 2rem;
-  text-transform: uppercase;
+  flex-direction: row;
+  padding: 2rem 2rem;
 }
 .products-grid-container {
   display: flex;
   justify-content: space-between;
-  padding: 2rem 0;
+  padding: 2rem 2rem;
+}
+@media (max-width: 425px) {
+  .products-grid-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.deal-container {
+  background-image: url("../../img/deal_headset.png");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 2rem;
+  background-size: 25%;
+  background-color: #e4e7ed;
+  height: 400px;
+  padding: 2rem;
+}
+@media (max-width: 425px) {
+  .deal-container {
+    background-size: 70%;
+    background-position-y: 130%;
+    background-position-x: 120%;
+    height: 700px;
+  }
+}
+.deal-container-content {
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.deal-container-content-timer {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.deal-container-content .deal-container-timer {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #D10024;
+  color: #fff;
+  margin: 0 1rem;
+}
+.deal-container-content .deal-container-timer-time {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.deal-container-content-title, .deal-container-content-subtitle {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.deal-container-content-subtitle {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.newsletter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  border-top: 2px solid #e4e7ed;
+}
+.newsletter-container h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+.newsletter-container h2 span {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.newsletter-container form {
+  display: flex;
+  margin-bottom: 3rem;
+}
+.newsletter-container form input[type=email] {
+  border: 1px solid #e4e7ed;
+  height: 40px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding-left: 25px;
+}
+.newsletter-container .social-media i {
+  padding: 12px;
+  margin: 5px;
+  border: 1px solid #e4e7ed;
+  cursor: pointer;
+  color: #333;
+  transition: 0.4s;
+}
+.newsletter-container .social-media i:hover {
+  color: #D10024;
+  background-color: #e4e7ed;
+}
+
+.footer {
+  background-color: #15161d;
+  padding: 3rem 0;
+}
+.footer a, .footer p {
+  color: #b9babc;
+}
+.footer li, .footer p {
+  margin-bottom: 1rem;
+}
+.footer li a:hover, .footer p a:hover {
+  color: #D10024;
+}
+.footer i {
+  margin-right: 0.3rem;
+}
+.footer h3 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.75rem;
+  padding-bottom: 1.5rem;
+}
+.footer-top {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 3rem;
+}
+.footer-top-about, .footer-top-categories, .footer-top-information, .footer-top-menu {
+  max-width: 25%;
+}
+.footer-bottom {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer-bottom-payments {
+  margin-bottom: 2rem;
+}
+.footer-bottom-payments i {
+  color: #333;
+  cursor: pointer;
+  font-size: 3rem;
+  margin: 5px;
+  transition: 0.4s;
+}
+.footer-bottom-payments i:hover {
+  color: #D10024;
 }/*# sourceMappingURL=layout.css.map */

@@ -10,6 +10,10 @@
     transition: 0.4s
     @include modules-mixins.center-bg
     background-size: 100%
+    @include base-mixins.mobile
+        width: 90%
+        margin: 1rem
+
     &:hover
         background-size: 120%
     &-cover
@@ -45,4 +49,3 @@
 
 #banner-3
     background-image: url('../../img/banner-3.jpg')
-
